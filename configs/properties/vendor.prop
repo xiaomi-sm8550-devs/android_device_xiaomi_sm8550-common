@@ -199,6 +199,9 @@ vendor.mm.enable.qcom_parser=16777215
 # OEM unlock
 ro.oem_unlock_supported=1
 
+# Power
+ro.vendor.extension_library=libqti-perfd-client.so
+
 # PSI
 vendor.pasr.activemode.enabled=true
 
