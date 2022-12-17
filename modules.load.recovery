@@ -317,3 +317,11 @@ hdcp_qseecom_dlkm.ko
 msm-mmrm.ko
 msm_ext_display.ko
 smcinvoke_dlkm.ko 
+q6_pdr_dlkm.ko
+q6_notifier_dlkm.ko
+snd_event_dlkm.ko
+gpr_dlkm.ko
+spf_core_dlkm.ko
+adsp_loader_dlkm.ko
+qti_battery_charger.ko
+qrng_dlkm.ko
