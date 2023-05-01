@@ -41,6 +41,11 @@ on post-fs-data
     mkdir /mnt/vendor/persist/goodix 0770 system system
     mkdir /mnt/vendor/persist/fpc 0770 system system
 
+# Libperf
+on property:sys.boot_completed=1
+    # Enable PowerHAL hint processing
+    setprop vendor.powerhal.init 1
+
 service touch_report /odm/bin/touch_report
     disabled
     override
