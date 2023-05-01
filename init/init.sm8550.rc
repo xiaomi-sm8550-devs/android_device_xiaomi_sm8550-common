@@ -231,6 +231,9 @@ on property:sys.boot_completed=1
     # Set thermal mode to mgame
     write /sys/devices/virtual/thermal/thermal_message/sconfig 19
 
+    # Enable PowerHAL hint processing
+    setprop vendor.powerhal.init 1
+
 on property:sys.boot_completed=1 && property:ro.build.type=user && property:ro.debuggable="1"
    chmod 0755 /sys/kernel/tracing
 
