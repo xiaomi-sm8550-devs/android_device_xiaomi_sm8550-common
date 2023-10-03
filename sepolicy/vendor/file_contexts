@@ -15,6 +15,8 @@
 # DisplayFeature
 /dev/mi_display/disp_feature u:object_r:vendor_displayfeature_device:s0
 /sys/devices/virtual/mi_display/disp_feature/disp-DSI-+[0-1](/.*)? u:object_r:vendor_sysfs_displayfeature:s0
+/(vendor|system/vendor)/bin/displayfeature u:object_r:vendor_displayfeature_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.xiaomi\.hardware\.displayfeature@1\.0-service u:object_r:vendor_hal_displayfeature_xiaomi_default_exec:s0
 
 # Dumpstate
 /vendor/bin/hw/android\.hardware\.dumpstate-service.xiaomi u:object_r:hal_dumpstate_impl_exec:s0

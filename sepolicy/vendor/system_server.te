@@ -1,0 +1,5 @@
+# Displayfeature
+allow system_server vendor_displayfeature:binder { call transfer };
+allow system_server vendor_displayfeature:fd *;
+get_prop(system_server, vendor_displayfeature_prop)
+hal_client_domain(system_server, vendor_hal_displayfeature_xiaomi)

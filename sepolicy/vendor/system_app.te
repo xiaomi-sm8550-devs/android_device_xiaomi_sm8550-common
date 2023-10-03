@@ -1,0 +1,6 @@
+# Displayfeature
+allow system_app vendor_hal_displayfeature_xiaomi_default:binder transfer;
+allow system_app vendor_sysfs_displayfeature:dir r_dir_perms;
+allow system_app vendor_sysfs_displayfeature:file rw_file_perms;
+get_prop(system_app, vendor_displayfeature_prop)
+hal_client_domain(system_app, vendor_hal_displayfeature_xiaomi)
