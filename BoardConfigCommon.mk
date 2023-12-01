@@ -147,12 +147,20 @@ BOARD_FLASH_BLOCK_SIZE := 262144 # (BOARD_KERNEL_PAGESIZE * 64)
 
 BOARD_USES_METADATA_PARTITION := true
 
-BOARD_XIAOMI_DYNAMIC_PARTITIONS_PARTITION_LIST := odm product system system_dlkm system_ext vendor vendor_dlkm
+XIAOMI_SSI_PARTITIONS := product system system_ext system_dlkm
+XIAOMI_TREBLE_PARTITIONS := odm vendor vendor_dlkm
+
+BOARD_XIAOMI_DYNAMIC_PARTITIONS_PARTITION_LIST := $(XIAOMI_SSI_PARTITIONS) $(XIAOMI_TREBLE_PARTITIONS)
 BOARD_XIAOMI_DYNAMIC_PARTITIONS_SIZE := 9659482112 # (BOARD_SUPER_PARTITION_SIZE - 4 MiB)
 BOARD_SUPER_PARTITION_GROUPS := xiaomi_dynamic_partitions
 
+$(foreach p, $(call to-upper, $(XIAOMI_SSI_PARTITIONS)), \
+    $(eval BOARD_$(p)IMAGE_FILE_SYSTEM_TYPE := ext4))
+
+$(foreach p, $(call to-upper, $(XIAOMI_TREBLE_PARTITIONS)), \
+    $(eval BOARD_$(p)IMAGE_FILE_SYSTEM_TYPE := erofs))
+
 $(foreach p, $(call to-upper, $(BOARD_XIAOMI_DYNAMIC_PARTITIONS_PARTITION_LIST)), \
-    $(eval BOARD_$(p)IMAGE_FILE_SYSTEM_TYPE := ext4) \
     $(eval TARGET_COPY_OUT_$(p) := $(call to-lower, $(p))))
 
 BOARD_PRODUCTIMAGE_MINIMAL_PARTITION_RESERVED_SIZE := false
