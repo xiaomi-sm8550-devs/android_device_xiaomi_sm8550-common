@@ -1,2 +1,5 @@
 # Bluetooth
 bluetooth.profile.sap.server.enabled=true
+persist.bluetooth.leaudio.allow.multiple.context=false
+persist.bluetooth.leaudio_offload.disabled=false
+ro.bluetooth.leaudio_offload.supported=true
