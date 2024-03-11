@@ -57,10 +57,19 @@ blob_fixups: blob_fixups_user_type = {
     ('vendor/bin/hw/android.hardware.security.keymint-service-qti',
      'vendor/lib64/libqtikeymint.so') : blob_fixup()
         .add_needed('android.hardware.security.rkp-V3-ndk.so'),
+    'vendor/bin/init.qcom.post_boot.sh': blob_fixup()
+        .regex_replace(r'\n[ \t]*start iop[ \t]*\n', '\n'),
     'vendor/etc/seccomp_policy/qwesd@2.0.policy' : blob_fixup()
         .add_line_if_missing('pipe2: 1'),
     'vendor/etc/qcril_database/upgrade/config/6.0_config.sql' : blob_fixup()
         .regex_replace('(persist\\.vendor\\.radio\\.redir_party_num.*)true', '\\1false'),
+    'vendor/etc/init/hw/init.qcom.rc': blob_fixup()
+        .regex_replace(r'\n[ \t]*mkdir /data/vendor/lm[^\n]*', '')
+        .regex_replace(r'\n[ \t]*mkdir /data/vendor/perfd[^\n]*', '')
+        .regex_replace(r'\n[ \t]*chmod[ \t]+2770[ \t]+/data/vendor/perfd[^\n]*', '')
+        .regex_replace(r'\n[ \t]*rm[ \t]+/data/vendor/perfd/default_values[^\n]*', '')
+        .regex_replace(r'\n[ \t]*mkdir /data/vendor/iop[^\n]*', '')
+        .regex_replace(r'\nservice iop /system/vendor/bin/iop[\s\S]*?socket iop seqpacket 0666 root system', ''),
     'vendor/lib64/c2.dolby.client.so' : blob_fixup()
         .add_needed('dolbycodec_shim.so'),
     'vendor/lib64/libqcodec2_core.so' : blob_fixup()

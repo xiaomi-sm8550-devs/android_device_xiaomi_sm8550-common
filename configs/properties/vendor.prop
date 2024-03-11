@@ -199,13 +199,6 @@ vendor.mm.enable.qcom_parser=16777215
 # OEM unlock
 ro.oem_unlock_supported=1
 
-# Power
-ro.vendor.extension_library=libqti-perfd-client.so
-ro.vendor.perf-hal.ver=2.3
-ro.vendor.perf.scroll_opt=1
-vendor.perf.framepacing.enable=1
-vendor.power.pasr.enabled=true
-
 # PSI
 vendor.pasr.activemode.enabled=true
 
