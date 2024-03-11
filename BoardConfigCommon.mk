@@ -177,6 +177,7 @@ ENABLE_VENDOR_RIL_SERVICE := true
 # SEPolicy
 BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
 include device/qcom/sepolicy_vndr/SEPolicy.mk
+include device/lineage/sepolicy/libperfmgr/sepolicy.mk
 
 # System properties
 TARGET_ODM_PROP += $(COMMON_PATH)/configs/properties/odm.prop
