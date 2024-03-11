@@ -53,6 +53,8 @@ blob_fixups: blob_fixups_user_type = {
     ('vendor/bin/hw/android.hardware.security.keymint-service-qti',
      'vendor/lib64/libqtikeymint.so') : blob_fixup()
         .add_needed('android.hardware.security.rkp-V3-ndk.so'),
+    'vendor/etc/public.libraries.txt': blob_fixup()
+        .regex_replace('libqti-perfd-client.so\n', ''),
     'vendor/etc/seccomp_policy/qwesd@2.0.policy' : blob_fixup()
         .add_line_if_missing('pipe2: 1'),
     'vendor/etc/qcril_database/upgrade/config/6.0_config.sql' : blob_fixup()
