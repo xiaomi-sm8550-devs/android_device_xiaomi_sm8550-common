@@ -1,3 +1,6 @@
 # Audio
 audio.offload.min.duration.secs=30
 media.stagefright.audio.deep=true
+
+# Bluetooth
+bluetooth.device_id.vendor_id=0x001D
