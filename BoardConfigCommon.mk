@@ -179,6 +179,10 @@ TARGET_SYSTEM_PROP += $(COMMON_PATH)/configs/properties/system.prop
 TARGET_SYSTEM_EXT_PROP += $(COMMON_PATH)/configs/properties/system_ext.prop
 TARGET_VENDOR_PROP += $(COMMON_PATH)/configs/properties/vendor.prop
 
+# Sensors
+TARGET_SENSOR_NOTIFIER_EXT ?= libsensor-notifier-ext
+$(call soong_config_set, xiaomiSm8550SensorVars, extensionLibs, $(TARGET_SENSOR_NOTIFIER_EXT))
+
 # VINTF
 DEVICE_MATRIX_FILE := hardware/qcom-caf/common/compatibility_matrix.xml
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
