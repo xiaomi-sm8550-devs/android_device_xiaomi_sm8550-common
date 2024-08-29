@@ -88,10 +88,6 @@ PRODUCT_COPY_FILES += \
     hardware/qcom-caf/sm8550/audio/pal/configs/kalama/card-defs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/card-defs.xml \
     hardware/qcom-caf/sm8550/audio/primary-hal/configs/kalama/microphone_characteristics.xml:$(TARGET_COPY_OUT_VENDOR)/etc/microphone_characteristics.xml
 
-# Automotive
-PRODUCT_PACKAGES += \
-    android.hardware.automotive.vehicle@2.0-manager-lib
-
 # Bluetooth
 PRODUCT_PACKAGES += \
     audio.bluetooth.default \
