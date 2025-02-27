@@ -23,6 +23,7 @@ pinctrl-spmi-gpio.ko
 pinctrl-spmi-mpp.ko
 pwm-qti-lpg.ko
 gpucc-crow.ko
+debugcc-kalama.ko
 videocc-crow.ko
 camcc-crow.ko
 gpucc-kalama.ko
