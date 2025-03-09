@@ -185,6 +185,8 @@ vendor/lib64/libDspIOProxy_stub.so
 vendor/lib64/libMapService.so
 vendor/lib64/libc++_shared.so
 vendor/lib64/libnanopb.so
+vendor/lib64/libSNPE.so
+vendor/lib64/libSNPESample.so
 
 # Configstore
 vendor/bin/hw/vendor.qti.hardware.capabilityconfigstore@1.0-service
@@ -269,6 +271,8 @@ vendor/lib64/libdiag.so
 vendor/lib64/vendor.qti.diaghal@1.0.so;MODULE_SUFFIX=-vendor
 
 # Display (HDR)
+odm/lib64/libsdr2hdr.so
+odm/lib64/libvideomode.so
 vendor/lib64/libhdr_tm.so
 vendor/lib64/libhdrdynamic.so
 vendor/lib64/libhdrdynamicootf.so
@@ -277,8 +281,10 @@ vendor/lib64/libhdrdynamicootf.so
 vendor/bin/qdcmss
 vendor/etc/init/qdcmss.rc
 vendor/lib64/libdpps.so
+vendor/lib64/libeyecare.so
 vendor/lib64/libgame_enhance.so
 vendor/lib64/libmemutils.so
+vendor/lib64/libmi-stc-HW-modulate.so
 vendor/lib64/libqdcm-algo.so
 vendor/lib64/libqdcm-json-mode-parser.so
 vendor/lib64/libqdcm-mode-parser.so
@@ -322,6 +328,7 @@ vendor/lib64/libvmfilexfer.so
 vendor/lib64/libsdm-color.so|c36b857c03f1ac8e89882fd59812ae501e4c9772
 
 # Display calibration data
+vendor/etc/display/LUT.txt
 vendor/etc/display/LUT0.txt
 vendor/etc/display/LUT1.txt
 vendor/etc/display/LUT2.txt
@@ -362,6 +369,35 @@ vendor/lib64/vendor.display.color@1.5.so
 vendor/lib64/vendor.display.color@1.6.so
 vendor/lib64/vendor.display.color@1.7.so
 vendor/lib64/vendor.display.postproc@1.0.so
+
+# Displayfeature
+odm/lib64/hw/displayfeature.default.so
+odm/lib64/libMiDispDevManager.so
+odm/lib64/libadaptivehdr.so
+odm/lib64/libcolortempmode.so
+odm/lib64/libdisplaycount.so
+odm/lib64/libdisplaylog.so
+odm/lib64/libdither.so
+odm/lib64/libflatmode.so
+odm/lib64/libfpsmonitor.so
+odm/lib64/libhdrmode.so
+odm/lib64/libhistprocess.so
+odm/lib64/libmiBrightness.so
+odm/lib64/libmiSensorCtrl.so
+odm/lib64/libmi_dspp.so
+odm/lib64/libpaperMode.so
+odm/lib64/librhytheyecare.so
+odm/lib64/libsre.so
+odm/lib64/libtruetone.so
+vendor/bin/displayfeature
+vendor/bin/hw/vendor.xiaomi.hardware.displayfeature@1.0-service
+vendor/etc/init/vendor.xiaomi.hardware.displayfeature@1.0-service.rc
+vendor/etc/vintf/manifest/vendor.xiaomi.hardware.displayfeature@1.0-service.xml
+vendor/lib64/hw/vendor.xiaomi.hardware.displayfeature@1.0-impl.so
+vendor/lib64/libdisplayfeature.so
+vendor/lib64/libdisplayfeatureservice.so
+vendor/lib64/libmilut.so
+vendor/lib64/libqservice.so
 
 # Dumpstate
 vendor/bin/hw/android.hardware.dumpstate-service.xiaomi
