@@ -253,6 +253,12 @@ PRODUCT_PACKAGES += \
     TelephonyOverlayCommon \
     WifiOverlayCommon
 
+# Parts
+PRODUCT_PACKAGES += \
+    XiaomiParts
+
+PRODUCT_BROKEN_VERIFY_USES_LIBRARIES := true
+
 # Partitions
 PRODUCT_PACKAGES += \
     vendor_bt_firmware_mountpoint \
