@@ -136,6 +136,10 @@ PRODUCT_PACKAGES += \
 # Dynamic partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
+# eUICC
+PRODUCT_PACKAGES += \
+    XiaomiEsimSwitcher
+
 # Fastbootd
 PRODUCT_PACKAGES += \
     fastbootd
