@@ -23,6 +23,7 @@ ro.vendor.audio.soundtrigger=sva
 
 # Camera
 ro.vendor.camera.interpolation.mialgo.support=true
+ro.camerax.extensions.enabled=true
 
 # Display
 debug.sf.set_idle_timer_ms=1100
