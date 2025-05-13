@@ -44,8 +44,6 @@ BOARD_SUPPORTS_SOUND_TRIGGER := true
 BOARD_SUPPORTS_OPENSOURCE_STHAL := true
 TARGET_USES_QCOM_MM_AUDIO := true
 
-$(call soong_config_set, android_hardware_audio, run_64bit, true)
-
 # Bootloader
 TARGET_NO_BOOTLOADER := true
 
@@ -184,9 +182,6 @@ TARGET_PRODUCT_PROP += $(COMMON_PATH)/configs/properties/product.prop
 TARGET_SYSTEM_PROP += $(COMMON_PATH)/configs/properties/system.prop
 TARGET_SYSTEM_EXT_PROP += $(COMMON_PATH)/configs/properties/system_ext.prop
 TARGET_VENDOR_PROP += $(COMMON_PATH)/configs/properties/vendor.prop
-
-# Touchscreen
-$(call soong_config_set, XIAOMI_TOUCH, HIGH_TOUCH_POLLING_PATH, /sys/devices/virtual/touch/touch_dev/bump_sample_rate)
 
 # VINTF
 DEVICE_MATRIX_FILE := hardware/qcom-caf/common/compatibility_matrix.xml
