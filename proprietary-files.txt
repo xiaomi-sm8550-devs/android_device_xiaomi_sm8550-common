@@ -1190,6 +1190,9 @@ vendor/etc/init/vendor.qti.hardware.servicetracker@1.2-service.rc
 vendor/etc/vintf/manifest/vendor.qti.hardware.servicetracker@1.2-service.xml
 vendor/lib64/hw/vendor.qti.hardware.servicetracker@1.2-impl.so
 
+# RIL (Esim hooking) - from fuxi OS2.0.203.0.VMCCNXM
+system_ext/framework/mirilhook.jar|e7d69ab439ad0fdf0c463d17f6de654da8ad676e
+
 # RIL
 system_ext/app/QtiTelephonyService/QtiTelephonyService.apk
 system_ext/etc/permissions/qcrilhook.xml
