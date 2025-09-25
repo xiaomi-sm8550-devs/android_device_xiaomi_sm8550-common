@@ -255,6 +255,7 @@ rmnet_perf.ko
 rmnet_core.ko
 qrng_dlkm.ko
 q6_dlkm.ko
+qts.ko
 wcd938x_slave_dlkm.ko
 btpower.ko
 sync_fence.ko

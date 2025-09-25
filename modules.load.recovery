@@ -309,6 +309,7 @@ qrtr.ko
 qrtr-smd.ko
 qrtr-mhi.ko
 qrtr-gunyah.ko
+qts.ko
 kunit.ko
 msm_drm.ko
 msm_hw_fence.ko
