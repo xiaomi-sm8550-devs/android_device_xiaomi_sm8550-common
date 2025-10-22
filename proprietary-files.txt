@@ -75,7 +75,6 @@ vendor/lib64/libmispowerop.so
 vendor/lib64/libqtigefar.so
 vendor/lib64/libresampler.so
 vendor/lib64/libspatializerparamstorage.so
-vendor/lib64/libvui_dmgr.so
 vendor/lib64/libvui_dmgr_client.so
 vendor/lib64/libxlog.so
 vendor/lib64/vendor.qti.hardware.ListenSoundModel@1.0-impl.so
@@ -1079,19 +1078,6 @@ vendor/etc/vintf/manifest/vendor.qti.qegahal-service.xml
 vendor/lib64/vendor.qti.qegahal-V1-ndk_platform.so
 vendor/lib64/vendor.qti.qegahal-impl.so
 
-# QESDK
-vendor/bin/qesdk-manager
-vendor/etc/init/qesdk-manager.rc
-vendor/etc/seccomp_policy/qesdk.policy
-vendor/lib64/libqesdk2_0.so
-vendor/lib64/libqesdk_manager.so
-vendor/lib64/vendor.qti.qesdhal@1.0.so
-vendor/lib64/vendor.qti.qesdhal@1.1.so
-vendor/lib64/vendor.qti.qesdhal@1.2.so
-vendor/lib64/vendor.qti.qesdhal@1.3-impl.so
-vendor/lib64/vendor.qti.qesdhal@1.3.so
-vendor/lib64/vendor.qti.qesdsys-V3-ndk.so
-
 # QMI
 system/etc/sysconfig/qti_whitelist.xml
 vendor/bin/init.qti.write.sh
@@ -1162,12 +1148,10 @@ system_ext/etc/permissions/qcrilhook.xml
 system_ext/framework/qcrilhook.jar
 vendor/bin/hw/qcrilNrd
 vendor/bin/ks
-vendor/bin/modemManager
 vendor/bin/qms
 vendor/bin/qtigetprop
 vendor/bin/qtisetprop
 vendor/etc/init/libxiaomi_qcril.rc
-vendor/etc/init/modemManager.rc
 vendor/etc/init/qcrilNrd.rc
 vendor/etc/init/qms.rc
 vendor/etc/modem/Diag.cfg
@@ -1202,7 +1186,6 @@ vendor/etc/qcril_database/upgrade/other/6_version_change_property_table_qcrilnr.
 vendor/etc/qcril_database/upgrade/other/7_version_update_ecc_table_qcrilnr.sql;FILEGROUP=proprietary_rildb_other_sql_files
 vendor/etc/qcril_database/upgrade/other/8_version_update_ecc_table.sql;FILEGROUP=proprietary_rildb_other_sql_files
 vendor/etc/qcril_database/upgrade/other/9_version_update_ecc_table.sql;FILEGROUP=proprietary_rildb_other_sql_files
-vendor/etc/seccomp_policy/modemManager.policy
 vendor/etc/seccomp_policy/qcrilnr@2.0.policy
 vendor/etc/vintf/manifest/android.hardware.radio.config.xml
 vendor/etc/vintf/manifest/android.hardware.radio.data.xml
