@@ -24,10 +24,10 @@ using android::hardware::sensors::V1_0::Event;
 
 namespace {
 
-void requestDozeBrightness(int fd, __u32 doze_brightness) {
+void requestDozeBrightness(int fd, __u32 doze_brightness, __u32 disp_id) {
     disp_doze_brightness_req req;
     req.base.flag = 0;
-    req.base.disp_id = MI_DISP_PRIMARY;
+    req.base.disp_id = disp_id;
     req.doze_brightness = doze_brightness;
     ioctl(fd, MI_DISP_IOCTL_SET_DOZE_BRIGHTNESS, &req);
 }
@@ -42,9 +42,12 @@ class AodSensorCallback : public IEventQueueCallback {
     }
 
     Return<void> onEvent(const Event& e) {
-        requestDozeBrightness(disp_fd_.get(), (e.u.scalar == 3 || e.u.scalar == 5)
-                                                      ? DOZE_BRIGHTNESS_LBM
-                                                      : DOZE_BRIGHTNESS_HBM);
+        for (auto& display : AodNotifier::activeDisplays) {
+            requestDozeBrightness(disp_fd_.get(),
+                                  (e.u.scalar == 3 || e.u.scalar == 5) ? DOZE_BRIGHTNESS_LBM
+                                                                       : DOZE_BRIGHTNESS_HBM,
+                                  display);
+        }
         return Void();
     }
 
@@ -71,12 +74,16 @@ void AodNotifier::notify() {
         LOG(ERROR) << "failed to open " << kDispFeatureDevice;
     }
 
+    const std::vector<disp_display_type> displays = {MI_DISP_PRIMARY, MI_DISP_SECONDARY};
+
     // Register for power events
-    disp_event_req req;
-    req.base.flag = 0;
-    req.base.disp_id = MI_DISP_PRIMARY;
-    req.type = MI_DISP_EVENT_POWER;
-    ioctl(disp_fd_.get(), MI_DISP_IOCTL_REGISTER_EVENT, &req);
+    for (const disp_display_type& display : displays) {
+        disp_event_req req;
+        req.base.flag = 0;
+        req.base.disp_id = display;
+        req.type = MI_DISP_EVENT_POWER;
+        ioctl(disp_fd_.get(), MI_DISP_IOCTL_REGISTER_EVENT, &req);
+    }
 
     struct pollfd dispEventPoll = {
             .fd = disp_fd_.get(),
@@ -108,6 +115,7 @@ void AodNotifier::notify() {
             case MI_DISP_POWER_LP1:
                 FALLTHROUGH_INTENDED;
             case MI_DISP_POWER_LP2:
+                activeDisplays.insert(response->base.disp_id);
                 res = mQueue->enableSensor(mSensorHandle, 20000 /* sample period */,
                                            0 /* latency */);
                 if (res != Result::OK) {
@@ -115,12 +123,15 @@ void AodNotifier::notify() {
                 }
                 break;
             case MI_DISP_POWER_ON:
-                requestDozeBrightness(disp_fd_.get(), DOZE_TO_NORMAL);
+                requestDozeBrightness(disp_fd_.get(), DOZE_TO_NORMAL, response->base.disp_id);
                 FALLTHROUGH_INTENDED;
             default:
-                res = mQueue->disableSensor(mSensorHandle);
-                if (res != Result::OK) {
-                    LOG(DEBUG) << "failed to disable sensor";
+                activeDisplays.erase(response->base.disp_id);
+                if (activeDisplays.empty()) {
+                    res = mQueue->disableSensor(mSensorHandle);
+                    if (res != Result::OK) {
+                        LOG(DEBUG) << "failed to disable sensor";
+                    }
                 }
                 break;
         }
