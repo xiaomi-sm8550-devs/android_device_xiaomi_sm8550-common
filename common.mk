@@ -258,7 +258,6 @@ PRODUCT_PACKAGES += \
     WifiOverlayCommon
 
 PRODUCT_PACKAGES += \
-    DialerResXiaomi \
     LineageResXiaomi
 
 # Partitions
