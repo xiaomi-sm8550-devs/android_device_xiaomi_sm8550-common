@@ -1,5 +1,5 @@
 ## All proprietary files from this list, unless pinned and noted otherwise,
-## are from Redmi K60 Pro (OS2.0.212.0.VMKCNXM).
+## are from Redmi K60 Pro (OS3.0.3.0.VMKCNXM).
 
 # ACDBs
 vendor/etc/acdbdata/IDP_UPD/IDP_UPD_acdb_cal.acdb
@@ -662,7 +662,7 @@ vendor/lib64/libllvm-qgl.so
 # Graphics (Vulkan)
 vendor/lib64/hw/vulkan.adreno.so
 
-# Hotword Enrollment - from vermeer OS2.0.207.0.VNKMIXM
+# Hotword Enrollment - from vermeer OS3.0.4.0.WNKMIXM
 product/priv-app/HotwordEnrollmentXGoogleHEXAGON_WIDEBAND/HotwordEnrollmentXGoogleHEXAGON_WIDEBAND.apk|368fc8e844306eef0effa37a02040da356d9b1e3
 product/priv-app/HotwordEnrollmentYGoogleHEXAGON_WIDEBAND/HotwordEnrollmentYGoogleHEXAGON_WIDEBAND.apk|1c18b1e33ee0dcfbaeb8d94cbd6f655259e332c3
 system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml|01b74943dc0ae9353883298d36fba94128536c9e
@@ -935,6 +935,9 @@ vendor/bin/poweroffm64
 vendor/etc/init/general_service.rc
 vendor/etc/init/minidump.rc
 vendor/etc/tzlog.dict
+
+# MISAUTH
+odm/lib64/vendor.xiaomi.hardware.misauth-V1-ndk_platform.so
 
 # NFC
 odm/bin/hw/android.hardware.nfc@1.2-service-st
