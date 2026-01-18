@@ -644,14 +644,14 @@ system_ext/lib64/lib-imsvt.so
 system_ext/lib64/lib-imsvtextutils.so
 system_ext/lib64/lib-imsvtutils.so
 system_ext/lib64/libdiag_system.so
-system_ext/lib64/libimscamera_jni.so
-system_ext/lib64/libimsmedia_jni.so
+system_ext/lib64/libimscamera_jni.so|0b61c9104edbcf3284daae09b253b2acbed65ad6
+system_ext/lib64/libimsmedia_jni.so|3c5a97651dbaa6f54e16d5df5b399e29df77d655
 system_ext/lib64/vendor.qti.ImsRtpService-V1-ndk.so
 system_ext/lib64/vendor.qti.ImsRtpService-V2-ndk.so
 system_ext/lib64/vendor.qti.imsrtpservice@3.0.so
 system_ext/lib64/vendor.qti.imsrtpservice@3.1.so
 system_ext/priv-app/QtiTelephony/QtiTelephony.apk;REQUIRED=QtiTelephonyCompat
-system_ext/priv-app/ims/ims.apk;REQUIRED=QtiTelephonyCompat
+system_ext/priv-app/ims/ims.apk;REQUIRED=QtiTelephonyCompat|097225e3521dddbe5178e048364364187ce35884
 
 # IMS (vendor)
 vendor/bin/ims_rtp_daemon
@@ -1079,7 +1079,7 @@ vendor/lib64/vendor.qti.qspmhal@1.0.so
 # RIL
 system_ext/app/QtiTelephonyService/QtiTelephonyService.apk
 system_ext/etc/permissions/qcrilhook.xml
-system_ext/framework/qcrilhook.jar
+system_ext/framework/qcrilhook.jar|0bf531be4af3c9958917ed215727fb6039056844
 vendor/bin/hw/qcrilNrd
 vendor/bin/ks
 vendor/bin/qms
