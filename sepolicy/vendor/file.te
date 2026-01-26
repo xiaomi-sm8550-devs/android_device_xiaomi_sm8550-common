@@ -1,5 +1,6 @@
 type camera_persist_file, file_type, mlstrustedobject, vendor_persist_type;
 type ir_spi_device, dev_type;
+type proc_walt, fs_type, proc_type;
 type sysfs_csiphy_umd_paras, fs_type, sysfs_type;
 type sysfs_goodix_touch, sysfs_type, fs_type;
 type sys_thermal_flash_state, fs_type, sysfs_type;
