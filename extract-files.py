@@ -66,6 +66,7 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/lib64/vendor.libdpmframework.so' : blob_fixup()
         .add_needed('libhidlbase_shim.so'),
     (
+        'vendor/bin/hw/android.hardware.contexthub-service.qmi',
         'vendor/lib64/libstfactory-vendor.so',
         'odm/lib64/nfc_nci.nqx.default.hw.so'
     ): blob_fixup()
