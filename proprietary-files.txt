@@ -791,13 +791,6 @@ vendor/etc/permissions/vendor.qti.hardware.factory.xml
 vendor/lib64/vendor.qti.hardware.factory@1.0.so
 vendor/lib64/vendor.qti.hardware.factory@1.1.so
 
-# MRM
-odm/bin/mrmd
-odm/etc/init/mrm.rc
-odm/etc/vintf/manifest/mrm.xml
-odm/lib64/libmiriskmanager.so
-odm/lib64/vendor.xiaomi.hardware.mrm-V1-ndk_platform.so
-
 # MTD
 odm/bin/mtd@1.3
 odm/etc/init/vendor.xiaomi.hardware.mtdservice@1.3-service.rc
@@ -872,9 +865,6 @@ vendor/bin/poweroffm64
 vendor/etc/init/general_service.rc
 vendor/etc/init/minidump.rc
 vendor/etc/tzlog.dict
-
-# MISAUTH
-odm/lib64/vendor.xiaomi.hardware.misauth-V1-ndk_platform.so
 
 # NFC
 odm/bin/hw/android.hardware.nfc@1.2-service-st
