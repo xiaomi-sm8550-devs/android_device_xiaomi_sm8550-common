@@ -50,6 +50,8 @@ lib_fixups: lib_fixups_user_type = {
 }
 
 blob_fixups: blob_fixups_user_type = {
+    'system_ext/lib64/vendor.qti.hardware.qccsyshal@1.2-halimpl.so' : blob_fixup()
+        .replace_needed('libprotobuf-cpp-full.so', 'libprotobuf-cpp-full-21.7.so'),
     'odm/lib64/libmt@1.3.so' : blob_fixup()
         .replace_needed('libcrypto.so', 'libcrypto-v33.so'),
     ('vendor/bin/hw/android.hardware.security.keymint-service-qti',
