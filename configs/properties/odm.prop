@@ -20,7 +20,6 @@ ro.vendor.audio.soundtrigger.xatx.gmm.user.level=60
 ro.vendor.audio.soundtrigger.xatx.vop.level=37
 ro.vendor.audio.soundtrigger.xiaomievent=1
 ro.vendor.audio.soundtrigger=sva
-vendor.audio.dolby.control.support=true
 
 # Camera
 ro.vendor.camera.interpolation.mialgo.support=true
@@ -36,7 +35,6 @@ ro.vendor.colorpick_adjust=true
 ro.vendor.dfps.enable=false
 ro.vendor.display.ai_disp.enable=true
 ro.vendor.display.default_fps=60
-ro.vendor.display.dolbyvision.support=true
 ro.vendor.display.fod_monitor_default_fps=120
 ro.vendor.display.mi_calib.enable=true
 ro.vendor.display.nature_mode.enable=true
@@ -50,7 +48,6 @@ ro.vendor.gcp.enable=1
 ro.vendor.hbm_backlight.enable=true
 ro.vendor.histogram.enable=true
 ro.vendor.localhbm.enable=true
-ro.vendor.mi_sf.gallery_p3_dolby_opt=true
 ro.vendor.soft_backlight.enable=true
 ro.vendor.sre.enable=true
 ro.vendor.standard.video.enable=true
@@ -83,7 +80,6 @@ persist.vendor.battery.health=true
 # Media
 debug.config.media.video.aie.support=true
 debug.config.media.video.ais.support=true
-debug.config.media.video.dolby_vision_suports=true
 debug.config.media.video.frc.support=true
 debug.media.video.chipset=6
 debug.media.video.frc=false

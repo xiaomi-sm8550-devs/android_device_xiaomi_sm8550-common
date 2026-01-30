@@ -75,10 +75,21 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libbase_shim.so'),
     (
        'vendor/etc/media_codecs_kalama.xml',
-       'vendor/etc/media_codecs_kalama_vendor.xml',
-       'vendor/etc/media_codecs_kalama_vendor_without_dvenc.xml',
     ): blob_fixup()
-        .regex_replace('.+media_codecs_(google_audio|google_c2|google_telephony|vendor_audio).+\n', ''),
+        .regex_replace('.+media_codecs_(dolby_audio|google_audio|google_c2|google_telephony|vendor_audio).+\n', ''),
+    (
+        'vendor/etc/media_codecs_kalama_vendor_without_dvenc.xml',
+    ): blob_fixup()
+        .regex_replace(r'\s*<MediaCodec\b[^>]*name=\"c2\.dolby\.[^>]*>[\s\S]*?<\/MediaCodec>', '')
+        .regex_replace('.+media_codecs_(dolby_audio|google_audio|google_c2|google_telephony|vendor_audio).+\n', ''),
+    (
+       'vendor/etc/media_codecs_kalama_vendor.xml',
+    ): blob_fixup()
+        .regex_replace(r'\s*<MediaCodec\b[^>]*name=\"c2\.dolby\.[^>]*>[\s\S]*?<\/MediaCodec>', '')
+        .regex_replace('.+media_codecs_(dolby_audio|google_audio|google_c2|google_telephony|vendor_audio).+\n', ''),
+    'vendor/etc/vintf/manifest/c2_manifest_vendor.xml': blob_fixup()
+        .regex_replace(r'\s*<fqname>@1\.0::IComponentStore/dolby</fqname>', '')
+        .regex_replace('.+DOLBY.+\n', ''),
     'vendor/etc/ueventd.rc' : blob_fixup()
         .add_line_if_missing('\n# Charger\n/sys/class/qcom-battery     night_charging            0660    system  system'),
     (
