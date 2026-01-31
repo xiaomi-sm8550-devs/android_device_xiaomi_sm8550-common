@@ -29,8 +29,6 @@ odm/lib64/libaudioroute_ext.so
 vendor/etc/models/acd/event.eai
 vendor/etc/models/acd/music.eai
 vendor/etc/models/acd/speech.eai
-vendor/etc/seccomp_policy/c2audio.vendor.base-arm64.policy
-vendor/etc/seccomp_policy/c2audio.vendor.ext-arm64.policy
 vendor/etc/kvh2xml.xml
 vendor/etc/misound_asc_model.tflite
 vendor/lib64/libPeripheralStateUtils.so
