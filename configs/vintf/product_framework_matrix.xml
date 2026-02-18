@@ -22,37 +22,9 @@
         </interface>
     </hal>
     <hal format="aidl" optional="true">
-        <name>vendor.xiaomi.hardware.misauth</name>
-        <interface>
-            <name>IMiSharedAuth</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
         <name>vendor.xiaomi.hardware.misecmedia</name>
         <interface>
             <name>IMiSecMediaService</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>vendor.xiaomi.hardware.mrm</name>
-        <interface>
-            <name>IMrm</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>vendor.xiaomi.hardware.mrm</name>
-        <interface>
-            <name>IMiCertificate</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>vendor.xiaomi.hardware.mrm</name>
-        <interface>
-            <name>IMrmRemoteAuth</name>
             <instance>default</instance>
         </interface>
     </hal>
