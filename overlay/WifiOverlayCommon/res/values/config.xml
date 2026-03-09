@@ -30,6 +30,9 @@
          6g band will change to 2.4|5g|6g band -->
     <bool name="config_wifiSoftapAutoAppendLowerBandsToBandConfigurationEnabled">false</bool>
 
+    <!-- Wifi driver supports IEEE80211AX for softap -->
+    <bool name="config_wifiSoftapIeee80211axSupported">true</bool>
+
     <!-- Configure wifi tcp buffersizes in the form:
          rmem_min,rmem_def,rmem_max,wmem_min,wmem_def,wmem_max -->
     <string name="config_wifi_tcp_buffers">524288,1048576,16777216,262144,524288,16777216</string>
