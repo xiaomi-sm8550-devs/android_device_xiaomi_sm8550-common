@@ -57,8 +57,6 @@ blob_fixups: blob_fixups_user_type = {
         .add_line_if_missing('pipe2: 1'),
     'vendor/etc/qcril_database/upgrade/config/6.0_config.sql' : blob_fixup()
         .regex_replace('(persist\\.vendor\\.radio\\.redir_party_num.*)true', '\\1false'),
-    'vendor/lib64/c2.dolby.client.so' : blob_fixup()
-        .add_needed('dolbycodec_shim.so'),
     'vendor/lib64/libqcodec2_core.so' : blob_fixup()
         .add_needed('libcodec2_shim.so'),
     'vendor/lib64/vendor.libdpmframework.so' : blob_fixup()
@@ -82,8 +80,6 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/etc/vintf/manifest/c2_manifest_vendor.xml': blob_fixup()
         .regex_replace(r'\s*<fqname>@1\.0::IComponentStore/dolby</fqname>', '')
         .regex_replace('.+DOLBY.+\n', ''),
-    'vendor/etc/ueventd.rc' : blob_fixup()
-        .add_line_if_missing('\n# Charger\n/sys/class/qcom-battery     night_charging            0660    system  system'),
     (
         'vendor/bin/poweropt-service',
         'vendor/lib64/libaodoptfeature.so',

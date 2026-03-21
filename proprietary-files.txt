@@ -186,9 +186,6 @@ vendor/lib64/libMapService.so
 vendor/lib64/libc++_shared.so
 vendor/lib64/libnanopb.so
 
-# Charger
-vendor/etc/charger_fw_fstab.qti
-
 # Configstore
 vendor/bin/hw/vendor.qti.hardware.capabilityconfigstore@1.0-service
 vendor/etc/init/vendor.qti.hardware.capabilityconfigstore@1.0-service.rc
@@ -691,20 +688,11 @@ vendor/etc/vintf/manifest/manifest_identity_credential.xml
 vendor/lib64/libqtiidentitycredential.so
 
 # Init
-vendor/bin/init.class_main.sh
 vendor/bin/init.kernel.post_boot-kalama.sh
 vendor/bin/init.kernel.post_boot.sh
-vendor/bin/init.qcom.early_boot.sh
-vendor/bin/init.qcom.sh
-vendor/etc/init/hw/init.qcom.factory.rc
-vendor/etc/init/hw/init.qcom.rc
 vendor/etc/init/hw/init.qti.kernel.rc
-vendor/etc/init/hw/init.target.rc
-vendor/etc/init/vendor.qti.diag_userdebug.rc
 
 # Kernel
-vendor/bin/init.qcom.class_core.sh
-vendor/bin/init.qcom.post_boot.sh
 vendor/bin/init.qti.kernel.sh
 vendor/bin/system_dlkm_modprobe.sh
 vendor/bin/vendor_modprobe.sh
@@ -1318,10 +1306,6 @@ vendor/lib64/vendor.qti.hardware.trustedui@1.0.so
 vendor/lib64/vendor.qti.hardware.trustedui@1.1.so
 vendor/lib64/vendor.qti.hardware.trustedui@1.2.so
 vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so
-
-# Uevent
-odm/etc/ueventd.rc
-vendor/etc/ueventd.rc
 
 # VPP
 vendor/bin/vppservice
