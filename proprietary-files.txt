@@ -687,16 +687,6 @@ vendor/etc/init/android.hardware.identity-service-qti.rc
 vendor/etc/vintf/manifest/manifest_identity_credential.xml
 vendor/lib64/libqtiidentitycredential.so
 
-# Init
-vendor/bin/init.kernel.post_boot-kalama.sh
-vendor/bin/init.kernel.post_boot.sh
-vendor/etc/init/hw/init.qti.kernel.rc
-
-# Kernel
-vendor/bin/init.qti.kernel.sh
-vendor/bin/system_dlkm_modprobe.sh
-vendor/bin/vendor_modprobe.sh
-
 # Keymaster
 vendor/bin/hw/android.hardware.security.keymint-service-qti
 vendor/etc/init/android.hardware.security.keymint-service-qti.rc
@@ -958,7 +948,6 @@ vendor/lib64/vendor.qti.qegahal-impl.so
 
 # QMI
 system/etc/sysconfig/qti_whitelist.xml
-vendor/bin/init.qti.write.sh
 vendor/bin/irsc_util
 vendor/bin/qmipriod
 vendor/bin/qrtr-cfg
