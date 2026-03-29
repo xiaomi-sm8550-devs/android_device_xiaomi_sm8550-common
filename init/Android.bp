@@ -1,0 +1,139 @@
+//
+// SPDX-FileCopyrightText: The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
+prebuilt_etc {
+    name: "charger_fw_fstab.qti",
+    src: "charger_fw_fstab.qti",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "fstab.qcom",
+    src: "fstab.qcom",
+    vendor: true,
+    vendor_ramdisk_available: true,
+}
+
+prebuilt_etc {
+    name: "init.qcom.factory.rc",
+    src: "init.qcom.factory.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.qcom.rc",
+    src: "init.qcom.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.qti.kernel.rc",
+    src: "init.qti.kernel.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.recovery.qcom.rc",
+    src: "init.recovery.qcom.rc",
+    sub_dir: "init",
+    recovery: true,
+}
+
+prebuilt_etc {
+    name: "init.sm8550.rc",
+    src: "init.sm8550.rc",
+    sub_dir: "init",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.target.rc",
+    src: "init.target.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "ueventd-odm.rc",
+    filename: "ueventd.rc",
+    src: "ueventd-odm.rc",
+    device_specific: true,
+}
+
+prebuilt_etc {
+    name: "ueventd.qcom.rc",
+    filename: "ueventd.rc",
+    src: "ueventd.qcom.rc",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.class_main.sh",
+    src: "init.class_main.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.kernel.post_boot-kalama.sh",
+    src: "init.kernel.post_boot-kalama.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.kernel.post_boot.sh",
+    src: "init.kernel.post_boot.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.qcom.class_core.sh",
+    src: "init.qcom.class_core.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.qcom.early_boot.sh",
+    src: "init.qcom.early_boot.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.qcom.post_boot.sh",
+    src: "init.qcom.post_boot.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.qcom.sh",
+    src: "init.qcom.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.qti.kernel.sh",
+    src: "init.qti.kernel.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.qti.write.sh",
+    src: "init.qti.write.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "system_dlkm_modprobe.sh",
+    src: "system_dlkm_modprobe.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "vendor_modprobe.sh",
+    src: "vendor_modprobe.sh",
+    vendor: true,
+}
