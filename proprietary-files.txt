@@ -842,13 +842,6 @@ vendor/lib64/libQnnHtpV73Stub.so
 vendor/lib64/libQnnSystem.so
 vendor/lib64/libqnnengine.so
 
-# OTRPAGENT
-odm/bin/vendor.xiaomi.hardware.otrpagent@2.0-service
-odm/etc/init/vendor.xiaomi.hardware.otrpagent@2.0-service.rc
-odm/etc/vintf/manifest/manifest_vendor.xiaomi.hardware.otrpagent@2.0.xml
-odm/lib64/vendor.xiaomi.hardware.otrpagent@2.0-impl.so
-odm/lib64/vendor.xiaomi.hardware.otrpagent@2.0.so
-
 # PD
 vendor/bin/pd-mapper
 vendor/lib64/libpdmapper.so
