@@ -939,13 +939,6 @@ vendor/lib64/vendor.qti.hardware.qccvndhal@1.0.so;MODULE_SUFFIX=-vendor
 vendor/bin/init.qti.qcv.sh
 vendor/etc/init/init.qti.qcv.rc
 
-# QEGAHAL
-vendor/bin/vendor.qti.qegahal-service
-vendor/etc/init/vendor.qti.qegahal-service.rc
-vendor/etc/vintf/manifest/vendor.qti.qegahal-service.xml
-vendor/lib64/vendor.qti.qegahal-V1-ndk_platform.so
-vendor/lib64/vendor.qti.qegahal-impl.so
-
 # QMI
 system/etc/sysconfig/qti_whitelist.xml
 vendor/bin/irsc_util
