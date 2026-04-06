@@ -961,13 +961,6 @@ vendor/lib64/libqsocket.so
 vendor/lib64/libsmemlog.so
 vendor/lib64/libsystem_health_mon.so
 
-# QMS
-vendor/bin/hw/vendor.xiaomi.modem.qms@1.0-service
-vendor/etc/init/vendor.xiaomi.modem.qms@1.0-service.rc
-vendor/etc/seccomp_policy/qms.policy
-vendor/etc/vintf/manifest/vendor.xiaomi.modem.qms.xml
-vendor/lib64/vendor.xiaomi.modem.qms@1.0.so
-
 # QSEECOM
 vendor/bin/hw/vendor.qti.hardware.qseecom@1.0-service
 vendor/bin/qseecomd
@@ -1044,6 +1037,7 @@ vendor/etc/qcril_database/upgrade/other/7_version_update_ecc_table_qcrilnr.sql;F
 vendor/etc/qcril_database/upgrade/other/8_version_update_ecc_table.sql;FILEGROUP=proprietary_rildb_other_sql_files
 vendor/etc/qcril_database/upgrade/other/9_version_update_ecc_table.sql;FILEGROUP=proprietary_rildb_other_sql_files
 vendor/etc/seccomp_policy/qcrilnr@2.0.policy
+vendor/etc/seccomp_policy/qms.policy
 vendor/etc/vintf/manifest/android.hardware.radio.config.xml
 vendor/etc/vintf/manifest/android.hardware.radio.data.xml
 vendor/etc/vintf/manifest/android.hardware.radio.messaging.xml

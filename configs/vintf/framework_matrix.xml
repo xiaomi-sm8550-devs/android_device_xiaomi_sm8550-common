@@ -568,21 +568,6 @@
             <instance>default</instance>
         </interface>
     </hal>
-    <hal format="hidl" optional="true">
-        <name>vendor.xiaomi.modem.qms</name>
-        <version>1.0</version>
-        <interface>
-            <name>IMiQms</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>vendor.xiaomi.modem.qms</name>
-        <interface>
-            <name>IMiQms</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
     <hal format="aidl" optional="true">
         <name>vendor.xiaomi.sensor.camera</name>
         <interface>
