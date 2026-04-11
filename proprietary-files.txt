@@ -714,12 +714,12 @@ odm/lib64/libmfido.so
 odm/lib64/libmt.so
 odm/lib64/libmt@1.3.so
 
-# MLIPAY
-odm/bin/mlipayd@1.1
-odm/etc/init/vendor.xiaomi.hardware.mlipay@1.1-service.rc
-odm/etc/vintf/manifest/manifest_vendor.xiaomi.hardware.mlipay.xml
-odm/lib64/libmlipay.so
-odm/lib64/libmlipay@1.1.so
+# MLIPAY - from diting OS3.0.1.0.VLFCNXM
+vendor/bin/mlipayd@1.1|08631f9b3dc1c27c723361a80140e87c9b534c28
+vendor/etc/init/vendor.xiaomi.hardware.mlipay@1.1-service.rc|b5ab5bcd031fe4d9781b5911c0595eaeac8b80ea
+vendor/etc/vintf/manifest/manifest_vendor.xiaomi.hardware.mlipay.xml|27aaea2ab58ace6555a634dc60ea062736342eb4
+vendor/lib64/libmlipay.so|254d4ef0ceccde3cccb240a0bfa83a299adf910b
+vendor/lib64/libmlipay@1.1.so|88787740a8a99dcf363d77711bfc1a886c68b288
 
 # MMI
 vendor/bin/hw/vendor.qti.hardware.factory@1.0-service
