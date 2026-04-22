@@ -1,5 +1,5 @@
 ## All proprietary files from this list, unless pinned and noted otherwise,
-## are from Redmi K60 Pro (OS3.0.5.0.VMKCNXM).
+## are from Redmi K60 Pro (OS3.0.303.0.WMKCNXM).
 
 # ACDBs
 vendor/etc/acdbdata/ffv_models/ffv__5.0.1_0.1__3.0.0_0.0__eai_2.10_enpu3.pmd
@@ -565,7 +565,6 @@ system_ext/framework/com.android.hotwordenrollment.common.util.jar|86baa7f5ff304
 
 # IMS (system)
 system/lib64/vendor.qti.diaghal-V1-ndk.so
-system_ext/app/ImsRcsService/ImsRcsService.apk
 system_ext/etc/permissions/telephony_system-ext_privapp-permissions-qti.xml
 system_ext/etc/permissions/vendor.qti.ims.rcsservice.xml
 system_ext/etc/sysconfig/qti_telephony_system_packages_config.xml
@@ -608,6 +607,7 @@ system_ext/lib64/libdiag_system.so
 system_ext/lib64/libimscamera_jni.so
 system_ext/lib64/libimsmedia_jni.so
 system_ext/lib64/vendor.qti.ImsRtpService-V1-ndk.so
+system_ext/lib64/vendor.qti.ImsRtpService-V2-ndk.so
 system_ext/lib64/vendor.qti.imsrtpservice@3.0.so
 system_ext/lib64/vendor.qti.imsrtpservice@3.1.so
 system_ext/priv-app/QtiTelephony/QtiTelephony.apk;REQUIRED=QtiTelephonyCompat
@@ -982,6 +982,10 @@ vendor/lib64/librpmb.so
 vendor/lib64/libspl.so
 vendor/lib64/libssd.so
 vendor/lib64/vendor.qti.hardware.qseecom@1.0.so
+
+# QSPA
+system_ext/etc/init/qspa_system.rc
+system_ext/etc/qspa/qspa_default.rc
 
 # QSPM
 vendor/bin/vendor.qti.qspmhal@1.0-service
