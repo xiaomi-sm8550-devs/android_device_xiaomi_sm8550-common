@@ -299,6 +299,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libpsi
 
+# QSPA
+PRODUCT_PACKAGES += \
+    vendor.qti.qspa-service
+
 # Radio
 PRODUCT_PACKAGES += \
     rfs_msm_mpss_readonly_mbnconfig_symlink
