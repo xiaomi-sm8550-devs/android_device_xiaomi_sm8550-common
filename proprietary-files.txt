@@ -261,6 +261,9 @@ vendor/lib64/libqcmaputils.so
 vendor/lib64/libqdi.so
 vendor/lib64/libqdp.so
 
+# Diag - from diting OS3.0.1.0.VLFCNXM
+vendor/etc/init/vendor.qti.diag.rc|fa77cf69d53a72f10489c8019f883dab08b2a07e
+
 # Diag
 system_ext/lib64/vendor.qti.diaghal@1.0.so
 vendor/bin/diag-router
