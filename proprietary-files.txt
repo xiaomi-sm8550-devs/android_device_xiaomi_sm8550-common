@@ -994,9 +994,8 @@ vendor/etc/seccomp_policy/qspm.policy
 vendor/lib64/vendor.qti.qspmhal@1.0-impl.so
 vendor/lib64/vendor.qti.qspmhal@1.0.so
 
-# RIL (Esim hooking) - from fuxi OS2.0.200.7.VMCCNXM
-system_ext/framework/mirilhook.jar|1eef4d279b1180ae5ea4095a20ebd18891a9dae5
-system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|cdbd5157e63394d1ce96630f88de5186f9d821d9
+# RIL (Esim hooking) - from fuxi OS3.0.3.0.WMCCNXM
+system_ext/framework/xiaomi-modem-common.jar|30900f8d132cd8ab2d586a44bdf09c0bfcb4f863
 
 # RIL
 system_ext/app/QtiTelephonyService/QtiTelephonyService.apk
