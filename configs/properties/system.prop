@@ -1,8 +1,3 @@
-# Dalvik
-dalvik.vm.dex2oat64.enabled=true
-dalvik.vm.heapsize=36m
-dev.pm.dyn_samplingrate=1
-
 # HWUI
 debug.hwui.skia_atrace_enabled=false
 ro.hwui.drop_shadow_cache_size=6
