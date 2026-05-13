@@ -25,9 +25,6 @@ persist.dbg.wfc_avail_ovr=1
 # Media
 media.settings.xml=/odm/etc/media_profiles_kalama.xml
 
-# QEMU
-qemu.hw.mainkeys=0
-
 # RIL
 ril.subscription.types=NV,RUIM
 rild.libpath=/vendor/lib64/libril-qc-hal-qmi.so
