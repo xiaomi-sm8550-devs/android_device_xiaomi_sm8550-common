@@ -60,7 +60,8 @@ BOARD_KERNEL_PAGESIZE    := 4096
 BOARD_KERNEL_CMDLINE := \
     disable_dma32=on \
     mtdoops.fingerprint=$(LINEAGE_VERSION) \
-    swinfo.fingerprint=$(LINEAGE_VERSION)
+    swinfo.fingerprint=$(LINEAGE_VERSION) \
+    sysctl.kernel.firmware_config.force_sysfs_fallback=1
 
 BOARD_BOOTCONFIG := \
     androidboot.console=ttyMSM0 \
