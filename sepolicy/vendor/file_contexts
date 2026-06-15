@@ -3,6 +3,7 @@
 /sys/devices/platform/soc/soc:qcom,pmic_glink/soc:qcom,pmic_glink:qcom,ucsi/typec/port0/data_role u:object_r:vendor_sysfs_usb_supply:s0
 
 # Camera
+/dev/stmvl53l5                                                                u:object_r:stmvl53l5_device:s0
 /(vendor|system/vendor)/bin/hw/vendor.xiaomi.hardware.quickcamera@1.0-service u:object_r:hal_quickcamera_default_exec:s0
 /odm/bin/hw/vendor\.qti\.camera\.provider-service_64 u:object_r:hal_camera_default_exec:s0
 /mnt/vendor/persist/camera(/.*)? u:object_r:camera_persist_file:s0

@@ -8,6 +8,7 @@ allow hal_camera_default proc_pressure_mem:file { getattr open read write };
 allow hal_camera_default proc_meminfo:file r_file_perms;
 allow hal_camera_default self:capability sys_resource;
 allow hal_camera_default self:unix_stream_socket create_socket_perms;
+allow hal_camera_default stmvl53l5_device:chr_file { ioctl open read write };
 allow hal_camera_default sysfs_csiphy_umd_paras:file rw_file_perms;
 allow hal_camera_default hal_quickcamera_hwservice:hwservice_manager find;
 allow hal_camera_default sys_thermal_flash_state:file rw_file_perms;
