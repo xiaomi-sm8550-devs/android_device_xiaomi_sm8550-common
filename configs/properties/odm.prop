@@ -136,7 +136,6 @@ ro.vendor.nfc.field_on_debounce=200
 ro.vendor.nfc.repair=1
 ro.vendor.nfc.secure_display_optim=1
 ro.vendor.nfc.wallet_fusion=1
-ro.vendor.se.chip.model=SN110T
 ro.vendor.se.info=17-673904
 ro.vendor.se.type=eSE,HCE,UICC
 

@@ -114,11 +114,25 @@ TARGET_KERNEL_EXT_MODULES := \
 	qcom/opensource/graphics-kernel \
 	qcom/opensource/wlan/platform \
 	qcom/opensource/wlan/qcacld-3.0/.kiwi_v2 \
-	qcom/opensource/bt-kernel \
+	qcom/opensource/bt-kernel
+
+ifeq ($(TARGET_USES_ST_NFC),true)
+TARGET_KERNEL_EXT_MODULES += \
+	st/opensource/driver
+else
+TARGET_KERNEL_EXT_MODULES += \
 	nxp/opensource/driver
+endif
 
 BOOT_KERNEL_MODULES := $(strip $(shell cat $(COMMON_PATH)/modules.load.recovery))
 BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(COMMON_PATH)/modules.load.vendor_dlkm))
+ifeq ($(TARGET_USES_ST_NFC),true)
+BOARD_VENDOR_KERNEL_MODULES_LOAD += \
+	stm_nfc_i2c.ko
+else
+BOARD_VENDOR_KERNEL_MODULES_LOAD += \
+	nxp-nci.ko
+endif
 BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(strip $(shell cat $(COMMON_PATH)/modules.load.first_stage))
 BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD  := $(strip $(shell cat $(COMMON_PATH)/modules.load.recovery))
 
@@ -174,6 +188,9 @@ include device/qcom/sepolicy_vndr/SEPolicy.mk
 
 # System properties
 TARGET_ODM_PROP += $(COMMON_PATH)/configs/properties/odm.prop
+ifneq ($(TARGET_USES_ST_NFC),true)
+TARGET_ODM_PROP += $(COMMON_PATH)/configs/properties/odm_nxp_nfc.prop
+endif
 TARGET_PRODUCT_PROP += $(COMMON_PATH)/configs/properties/product.prop
 TARGET_SYSTEM_PROP += $(COMMON_PATH)/configs/properties/system.prop
 TARGET_SYSTEM_EXT_PROP += $(COMMON_PATH)/configs/properties/system_ext.prop
@@ -187,8 +204,11 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
 
 DEVICE_FRAMEWORK_MANIFEST_FILE += $(COMMON_PATH)/configs/vintf/framework_manifest.xml
 DEVICE_MANIFEST_FILE := \
-    $(COMMON_PATH)/configs/vintf/manifest_kalama.xml \
-    $(COMMON_PATH)/configs/vintf/manifest_xiaomi.xml
+	$(COMMON_PATH)/configs/vintf/manifest_kalama.xml \
+	$(COMMON_PATH)/configs/vintf/manifest_xiaomi.xml
+ifneq ($(TARGET_USES_ST_NFC),true)
+DEVICE_MANIFEST_FILE += $(COMMON_PATH)/configs/vintf/manifest_nxp_nfc.xml
+endif
 
 # Vendor security patch
 VENDOR_SECURITY_PATCH := 2026-02-01

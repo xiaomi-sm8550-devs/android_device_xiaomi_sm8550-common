@@ -214,7 +214,6 @@ cnss_plat_ipc_qmi_svc.ko
 qce50_dlkm.ko
 rmnet_sch.ko
 qcedev-mod_dlkm.ko
-nxp-nci.ko
 smcinvoke_dlkm.ko
 mbhc_dlkm.ko
 rndisipam.ko
