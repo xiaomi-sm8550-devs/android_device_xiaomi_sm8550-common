@@ -20,7 +20,7 @@ SscCalApiWrapper::SscCalApiWrapper() {
             LOG(ERROR) << "could not find init_current_sensors: " << dlerror();
         }
 
-        process_msg = (process_msg_t)dlsym(mSscCalApiHandle, "_Z11process_msgP8_oem_msg");
+        process_msg = (process_msg_t)dlsym(mSscCalApiHandle, "_Z11process_msgPN6vendor6xiaomi6sensor16citsensorservice4V2_07oem_msgE");
         if (process_msg == NULL) {
             LOG(ERROR) << "could not find process_msg: " << dlerror();
         }
