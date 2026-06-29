@@ -278,3 +278,4 @@ rmnet_shs.ko
 wcd939x_slave_dlkm.ko
 radio-i2c-rtc6226-qca.ko
 ipanetm.ko
+tango32.ko
