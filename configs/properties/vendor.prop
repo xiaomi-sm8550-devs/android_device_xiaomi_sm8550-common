@@ -95,9 +95,6 @@ ro.camera.enableCamera1MaxZsl=1
 ro.hardware.camera=xiaomi
 vendor.camera.aux.packagelist=com.android.camera,org.lineageos.aperture,org.lineageos.aperture.dev
 
-# Dalvik
-persist.sys.dalvik.vm.lib.2=libart.so
-
 # Display
 ro.vendor.displayfeature.dump=true
 vendor.display.comp_mask=0
