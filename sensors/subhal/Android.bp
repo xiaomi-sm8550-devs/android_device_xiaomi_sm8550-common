@@ -8,6 +8,7 @@ cc_library_shared {
     name: "sensors.ssc_wrapper",
     defaults: ["hidl_defaults"],
     srcs: [
+        "SccOemConfig.cpp",
         "SensorsSubHal.cpp",
     ],
     shared_libs: [
@@ -17,6 +18,7 @@ cc_library_shared {
         "libbase",
         "libdl",
         "libhidlbase",
+        "libssc",
         "libutils",
     ],
     header_libs: [
