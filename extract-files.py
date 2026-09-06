@@ -88,6 +88,8 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so'),
     'vendor/etc/init/hw/init.batterysecret.rc' : blob_fixup()
         .regex_replace('group system system wakelock', 'group system system usb wakelock'),
+    'vendor/etc/sensors/hals.conf': blob_fixup()
+        .regex_replace('sensors.ssc.so', 'sensors.ssc_wrapper.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
