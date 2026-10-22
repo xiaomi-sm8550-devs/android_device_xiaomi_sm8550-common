@@ -128,8 +128,8 @@ drm.service.enabled=true
 vendor.wv.oemcrypto.debug.enable_hlos_data_path=true
 
 # Fingerprint
-persist.vendor.fingerprint.sensor_modules=goodix_fod
-persist.vendor.fingerprint.type=udfps_optical
+persist.vendor.fingerprint.sensor_modules?=goodix_fod
+persist.vendor.fingerprint.type?=udfps_optical
 
 # FM
 vendor.hw.fm.init=0
