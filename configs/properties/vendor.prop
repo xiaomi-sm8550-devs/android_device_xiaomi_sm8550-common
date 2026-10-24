@@ -180,6 +180,9 @@ ro.surface_flinger.wcg_composition_dataspace=143261696
 vendor.gralloc.disable_ubwc=0
 vendor.gralloc.enable_logs=0
 
+# Incremental FS
+ro.incremental.enable=yes
+
 # Media
 debug.c2.use_dmabufheaps=1
 debug.stagefright.c2inputsurface=-1
