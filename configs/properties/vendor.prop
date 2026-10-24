@@ -186,23 +186,13 @@ ro.incremental.enable=yes
 # Media
 debug.c2.use_dmabufheaps=1
 debug.stagefright.c2inputsurface=-1
-ro.mediaserver.64b.enable=true
 vendor.mm.enable.qcom_parser=16777215
-
-# OEM unlock
-ro.oem_unlock_supported=1
 
 # Power
 ro.vendor.extension_library=libqti-perfd-client.so
 
-# PSI
-vendor.pasr.activemode.enabled=true
-
 # QcomSysd
 persist.vendor.qcomsysd.enabled=1
-
-# QSPM
-ro.vendor.qspm.enable=true
 
 # Radio
 persist.radio.multisim.config=dsds
@@ -235,9 +225,6 @@ vendor.usb.rndis.func.name=gsi
 vendor.usb.use_ffs_mtp=1
 vendor.usb.use_gadget_hal=1
 
-# Vibrator
-ro.vendor.mm.vibrator.sys_path=/sys/class/qcom-haptics
-
 # Volume
 ro.config.alarm_vol_steps=15
 ro.config.media_vol_steps=25
@@ -245,10 +232,4 @@ ro.config.system_vol_steps=15
 ro.config.vc_call_vol_steps=11
 
 # WLAN
-ro.hardware.wlan.chip=kiwi_v2
-ro.hardware.wlan.dbs=2
-ro.hardware.wlan.mimo=1
-ro.hardware.wlan.vendor=qcom
-ro.vendor.net.enable_passpoint_r1=1
 wifi.aware.interface=wifi-aware0
-
