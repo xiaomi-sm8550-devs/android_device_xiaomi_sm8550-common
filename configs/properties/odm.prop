@@ -64,80 +64,12 @@ vendor.display.force_tonemapping=1
 vendor.display.use_layer_ext=0
 
 # Fingerprint
-persist.vendor.sys.fp.dump_data=0
 persist.vendor.sys.fp.expolevel=0x88
-ro.hardware.fp.fod.location=low
-ro.hardware.fp.fod.lowlight.brightness.threshold=411
-ro.hardware.fp.fod.lowlight.lux.threshold=3
-ro.hardware.fp.fod.touch.ctl.version=2.0
-ro.hardware.fp.fod=true
 
 # Framework detect
 ro.vendor.qti.va_odm.support=1
 
-# Health
-persist.vendor.battery.health=true
-
-# Media
-debug.config.media.video.aie.support=true
-debug.config.media.video.ais.support=true
-debug.config.media.video.frc.support=true
-debug.media.video.chipset=6
-debug.media.video.frc=false
-debug.media.video.vpp=false
-ro.vendor.media.video.frc.support=true
-ro.vendor.media.video.vpp.support=true
-vendor.media.vpp.aie.cade=100
-vendor.media.vpp.aie.ltm=1
-vendor.media.vpp.aie.ltmacebrih=0
-vendor.media.vpp.aie.ltmacebril=20
-vendor.media.vpp.aie.ltmacestr=37
-vendor.media.vpp.aie.ltmsatgain=55
-vendor.media.vpp.aie.ltmsatoff=55
-vendor.media.vpp.debug.value.use=false
-
-# Vibrator
-ro.odm.mm.vibrator.device_type=agm
-ro.odm.mm.vibrator.ffactorDefault=175
-ro.odm.mm.vibrator.sys_path=/sys/class/qcom-haptics
-sys.haptic.device_type=agm
-sys.haptic.down.normal=2
-sys.haptic.down.strong=5
-sys.haptic.down.weak=0
-sys.haptic.down=5,2
-sys.haptic.dynamiceffect.richtap=true
-sys.haptic.dynamiceffect=true
-sys.haptic.flick.light=7,2
-sys.haptic.flick=5,2
-sys.haptic.hold=4,0
-sys.haptic.infinitelevel=true
-sys.haptic.intensityforkeyboard=true
-sys.haptic.long.press=0,1
-sys.haptic.mesh.heavy=8,2
-sys.haptic.mesh.light=5,1
-sys.haptic.mesh.normal=5,2
-sys.haptic.motor=linear
-sys.haptic.pickup=2,2
-sys.haptic.popup.light=6,1
-sys.haptic.popup.normal=6,2
-sys.haptic.runin=13
-sys.haptic.scroll.edge=7,0
-sys.haptic.switch=9,2
-sys.haptic.tap.light=5,2
-sys.haptic.tap.normal=3,2
-sys.haptic.trigger.drawer=2,0
-
 # NFC
-ro.vendor.nfc.aclog=1
-ro.vendor.nfc.debounce_field_on=1
-ro.vendor.nfc.disable.i2c=false
-ro.vendor.nfc.dispatch_optim=1
-ro.vendor.nfc.field_on_debounce=200
-ro.vendor.nfc.repair=1
-ro.vendor.nfc.secure_display_optim=1
-ro.vendor.nfc.wallet_fusion=1
-ro.vendor.se.chip.model=SN110T
-ro.vendor.se.info=17-673904
 ro.vendor.se.type=eSE,HCE,UICC
 
 # Properties
@@ -145,10 +77,6 @@ ro.product.property_source_order=odm,vendor,product,system_ext,system
 
 # Radio
 persist.vendor.radio.dynamic_sar=1
-persist.vendor.radio.game_hand=1
-ro.vendor.net.enable_dual_wifi=1
 
-# Sensors
-persist.vendor.sensor.deviceorient=true
-persist.vendor.sensor.onetrack=true
+# SSR
 persist.vendor.ssr.restart_level=ALL_ENABLE
