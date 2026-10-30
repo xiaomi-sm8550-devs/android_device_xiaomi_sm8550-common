@@ -277,6 +277,7 @@ PRODUCT_COPY_FILES += \
 # Overlay
 PRODUCT_PACKAGES += \
     CarrierConfigOverlayCommon \
+    DeviceAsWebcamResCommon \
     FrameworkResOverlayCommon \
     SystemUIOverlayCommon \
     SettingsOverlayCommon \
