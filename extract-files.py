@@ -69,11 +69,7 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libcodec2_shim.so'),
     'vendor/lib64/vendor.libdpmframework.so': blob_fixup()
         .add_needed('libhidlbase_shim.so'),
-    (
-        'vendor/bin/hw/android.hardware.contexthub-service.qmi',
-        'vendor/lib64/libstfactory-vendor.so',
-        'odm/lib64/nfc_nci.nqx.default.hw.so'
-    ): blob_fixup()
+    'vendor/bin/hw/android.hardware.contexthub-service.qmi': blob_fixup()
         .add_needed('libbase_shim.so'),
     'vendor/etc/media_codecs_kalama.xml': blob_fixup()
         .regex_replace(r'\s*<MediaCodec\b[^>]*name=\"c2\.dolby\.[^>]*>[\s\S]*?<\/MediaCodec>', '')
