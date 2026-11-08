@@ -20,7 +20,6 @@
 /vendor/bin/hw/android\.hardware\.dumpstate-service.xiaomi u:object_r:hal_dumpstate_impl_exec:s0
 
 # Fingerprint
-/vendor/bin/hw/android\.hardware\.biometrics\.fingerprint-service\.xiaomi u:object_r:hal_fingerprint_default_exec:s0
 /data/vendor/goodix(/.*)? u:object_r:vendor_fingerprint_data_file:s0
 /dev/goodix_fp u:object_r:vendor_fingerprint_device:s0
 /mnt/vendor/persist/goodix(/.*)? u:object_r:vendor_fingerprint_data_file:s0
@@ -31,18 +30,11 @@
 # IR
 /dev/ir_spi u:object_r:ir_spi_device:s0
 
-# Mlipay
-/vendor/bin/mlipayd@1.1 u:object_r:hal_mlipay_default_exec:s0
-
 # NFC
 /odm/bin/hw/vendor\.nxp\.hardware\.nfc@2\.0-service u:object_r:hal_nfc_default_exec:s0
 
-# Sensors HAL
-/vendor/bin/hw/android\.hardware\.sensors-service\.xiaomi-multihal      u:object_r:hal_sensors_default_exec:s0
-
 # Touchscreen
 /dev/xiaomi-touch u:object_r:touchfeature_device:s0
-/vendor/bin/hw/vendor\.lineage\.touch-service\.xiaomi u:object_r:hal_lineage_touch_default_exec:s0
 /sys/devices/platform/goodix_ts.0(/.*)? u:object_r:sysfs_goodix_touch:s0
 
 # Thermal
