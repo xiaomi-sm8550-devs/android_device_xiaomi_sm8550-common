@@ -429,6 +429,17 @@ vendor/firmware/evass.mdt
 vendor/lib64/libfastcvdsp_stub.so
 vendor/lib64/libfastcvopt.so
 
+# Face
+odm/bin/hw/android.hardware.biometrics.face-aidl-service
+odm/bin/mifaced@1.0
+odm/etc/init/android.hardware.biometrics.face-aidl-service.rc
+odm/etc/init/vendor.xiaomi.hardware.miface@1.0-service.rc
+odm/etc/vintf/manifest/face-default.xml
+odm/lib64/libmiface.so
+vendor/etc/vintf/manifest/manifest_vendor.xiaomi.hardware.miface.xml
+vendor/lib64/libcamera2ndk_vendor.so:vendor/lib64/libcamera2ndk_vendor.xiaomi.so;FIX_SONAME
+vendor/lib64/vendor.xiaomi.hardware.miface@1.0.so
+
 # Fingerprint
 vendor/etc/permissions/qti_fingerprint_interface.xml
 vendor/etc/vintf/manifest/fod.xml

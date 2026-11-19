@@ -57,6 +57,11 @@ blob_fixups: blob_fixups_user_type = {
     'odm/lib64/libmt@1.3.so': blob_fixup()
         .replace_needed('libcrypto.so', 'libcrypto-v33.so'),
     (
+        'odm/bin/mifaced@1.0',
+        'odm/lib64/libmiface.so'
+    ): blob_fixup()
+        .replace_needed('libcamera2ndk_vendor.so', 'libcamera2ndk_vendor.xiaomi.so'),
+    (
         'vendor/bin/hw/android.hardware.security.keymint-service-qti',
         'vendor/lib64/libqtikeymint.so'
     ): blob_fixup()

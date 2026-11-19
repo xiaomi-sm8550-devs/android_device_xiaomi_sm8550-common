@@ -19,6 +19,10 @@
 # Dumpstate
 /vendor/bin/hw/android\.hardware\.dumpstate-service.xiaomi u:object_r:hal_dumpstate_impl_exec:s0
 
+# Face
+/(odm|vendor/odm)/bin/hw/android\.hardware\.biometrics\.face-aidl-service u:object_r:hal_face_default_exec:s0
+/(odm|vendor/odm)/bin/mifaced@1\.0 u:object_r:hal_miface_default_exec:s0
+
 # Fingerprint
 /vendor/bin/hw/android\.hardware\.biometrics\.fingerprint-service\.xiaomi u:object_r:hal_fingerprint_default_exec:s0
 /data/vendor/goodix(/.*)? u:object_r:vendor_fingerprint_data_file:s0
